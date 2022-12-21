@@ -38,17 +38,13 @@
     };
 
     macros {
-        zed_em_kay: zed_em_kay {
+        windowSwitcher: windowSwitcher {
             compatible = "zmk,behavior-macro";
-            label = "ZM_zed_em_kay";
+            label = "new_macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp Z &kp M &kp K>,
-                <&macro_release>,
-                <&kp LSHFT>;
+                <&kp LEFT_COMMAND &kp TAB>;
         };
     };
 
@@ -75,10 +71,10 @@
 
         Layer__2 {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans     &trans     &trans     &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans          &trans  &kt LEFT     &kt UP   &kt DOWN  &kt RIGHT  &trans
- &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans  &kp PG_UP  &kp PG_DN     &trans  &trans
-                         &trans  &trans  &trans          &trans    &trans     &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans  &windowSwitcher     &trans     &trans     &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans         &kt LEFT     &kt UP   &kt DOWN  &kt RIGHT  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans  &kp PG_UP  &kp PG_DN     &trans  &trans
+                         &trans  &trans  &trans          &trans           &trans     &trans
             >;
         };
 
