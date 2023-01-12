@@ -9,6 +9,20 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        new_combo {
+            bindings = <&kp ENTER>;
+            key-positions = <22 21 19>;
+        };
+
+        new_combo {
+            bindings = <&trans>;
+            key-positions = <22 21 7>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
